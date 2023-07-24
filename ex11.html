@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex11</title>
+</head>
+<body>
+	함수 표현식<br>
+	- 익명 함수 즉시 실행 함수<br><br>
+	
+	익명 함수<br>
+	- 함수의 이름을 지정하지 않고 변수에 할당하여 사용하는 방식<br>
+	- 한번만 실행해야 하는 경우 만들어 놓고 사용<br>
+	- 일반 함수와 다른 점은 일반 함수는 재활용 목적으로
+		메모리를 계속 차지하고 있다. 익명함수는 한번 사용되고 사라진다<br><br>
+		
+	즉시 실행 함수<br>
+	- 함수를 정의함과 동시에 실행하는 함수<br>
+	- 보편적으로 어떠한 내용을 초기화하는 목적으로 사용<br>
+	<script type="text/javascript">
+		// 익명 함수
+		let sumFunc = function(x, y){
+			alert("익명 함수 실행");
+			return x+y;
+		}
+		document.write( sumFunc(200, 300) );
+		
+		// 즉시 실행 함수
+		let result = ( function test1(){
+			alert("즉시 실행 함수!!!");
+			return "DB로부터 데이터를 초기에 받아옴!!";
+		})();
+		document.write( result );
+		
+		let name = "홍길동";
+		(function test2(n){
+			document.write("매개변수 받아옴 : " + n);
+		})(name);
+		
+	</script>
+</body>
+</html>

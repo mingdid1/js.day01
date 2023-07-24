@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test05</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const kor = prompt("국어 점수 입력");
+		const eng = prompt("영어 점수 입력");
+		const math = prompt("수학 점수 입력");
+		const sum = Number(kor)+parseInt(eng)+Number(math);
+		const avg = sum / 3; let msg1, grade;
+		if(avg >= 60 ){
+			if(avg>=90){ grade = "A"}
+				else if(avg>=80){ grade = "B"}
+				else if(avg>=70){ grade = "C"}
+				else{ grade = "D"}
+			if(kor < 40){ msg1 = kor+" : kor 불합격"; }
+				else if(eng < 40){ msg1 = (eng+" : eng 불합격"); }
+				else if(math < 40){ msg1 = (math+" : math 불합격"); }
+				else{ msg1 = ("합격 입니다"); }
+		}else{ msg1 = avg+" : 평균 불합격"; grade = "FFFFF"; }
+		
+		document.write(`국 : ${kor} 점<br>`); document.write(`영 : ${eng} 점<br>`);
+		document.write(`수 : ${math} 점<br>`);document.write(`합 : ${sum} 점<br>`);
+		document.write(`평균 : ${avg.toFixed(2)} 점<br>`);
+		document.write(`등급 : ${grade}<hr>`); document.write(`결과 : ${msg1}<br>`);
+
+		
+		
+		const num = prompt("수 입력")
+		let msg2;
+		if( num == 0 ){
+			msg2 = num+"는 잘못입력";
+		}else if(num %3 == 0 && num % 4 ==0){
+			msg2 = (num+" : 3,4의 배수입니다");
+		}else if(num % 3 == 0){
+			msg2 = (num+" : 3의 배수입니다");
+		}else if(num % 4 == 0){
+			msg2 = (num+" : 4의 배수입니다");
+		}else{
+			msg2 = (num+" : 3,4의 배수가 아닙니다");
+		}
+		document.write(`결과 : ${msg2}<br>`)
+		
+		
+		
+		let time = prompt("비행기 탄 시간(분) 입력")
+		let money=30000;
+		time -= 30;
+		if(time>0){
+			//money += (5000+parseInt((time-1)/10)*5000);
+			if(time%10 == 0){
+				money=money+time/10*5000;
+			}
+			else{
+				money=money+parseInt(time/10)*5000+5000;
+			}
+		}
+		document.write(`${time+30}분 비행기 요금 : ${money}원 입니다`);
+	</script>
+</body>
+</html>

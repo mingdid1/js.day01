@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex10</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function test(x, y) {
+			console.log("첫번째 함수 실행");
+		}
+		function test(x){
+			console.log("두번째 함수 실행");
+		}
+		test(10,20);
+		test(10);
+		test();
+		
+		function test2(x, y, z){
+			document.write(`${x}, ${y}, ${z} <br>`);
+			let sum = x + y;
+			console.log( sum );	
+			if (x == undefined && y == undefined)
+				document.write("x, y 값 없음<br>");
+		}
+		test2();	// undefined + undefined = NaN
+		test2(10);	// 10 + undefined = NaN
+		test2(10, 20);
+		test2(10, 20, 30);
+		
+		function test3(){
+			document.write("<hr>");
+			document.write( arguments + "<br>");
+			document.write( arguments.length);	// 저장된 개수
+			document.write("<hr>");
+		}
+		test3(10);
+		test3(10,20,30,40);
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex02</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let name="홍길동";
+		let age= prompt("나이 입력");
+		document.write("학생 이름 : " + name +"<br>");
+		document.write("학생 나이 : " + age +"<hr>");
+		/* 현재페이지에 출력 */
+	
+		document.write(`학생 이름: ${name}입니다<br>`);	
+		document.write(`학생 나이: ${age}입니다<hr>`);
+
+		console.log(`type age: ${typeof age}`);
+		let num = Number(age);
+		
+		console.log("type num : ", typeof num);
+		console.log(`type num : ${typeof num.toString()}`);
+		console.log(`type num : ${typeof (num+"")}`);
+	</script>
+	
+</body>
+</html>

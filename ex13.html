@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex13</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const result01 = () => {10 + 20};	// 값 연산만, return(x) 
+		const result02 = () => 10 + 20;		// 연산 후 return
+		const result03 = () => (10 + 20);	// 연산 후 return
+		
+		const result04 = () => { // 중괄호 사용시 return을 해준다
+			let sum = 10 + 20;
+			return sum
+		};
+		
+		console.log( result01()); // undefined
+		console.log( result02()); // 30
+		console.log( result03()); // 30
+		console.log( result04()); // 30
+	</script>
+</body>
+</html>

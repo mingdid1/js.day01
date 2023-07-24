@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex12</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function test() {
+			console.log("일반 함수");
+		}
+		
+		const test2 = () => console.log("화살표 함수");
+		test();
+		test2();
+
+		/*
+		function test33(){
+			console.log("여러개");
+			return 1000;
+		}		
+		*/
+		let test3 = () => {	// 여러개는 중괄호 안에 넣어서 작성
+			console.log("여러개");
+			return 1000;
+		}
+		let num = test3();
+		console.log( num );
+
+	</script>
+</body>
+</html>

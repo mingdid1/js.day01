@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex08</title>
+</head>
+<body>
+	<script type="text/javascript">
+		sumFunc();
+		const n1 = prompt("수 입력");
+		const n2 = prompt("수 입력");
+			
+		sum = sumFunc(n1, n2);
+		
+		document.write(`${n1} + ${n2} = ${sum}`);
+			
+		function sumFunc(n11, n22) {	// 매개변수 타입 지정 안해도 됨
+			const sum = Number(n11) + Number(n22);
+			return sum;			// 반환 타입 지정 안해줘도 됨
+		}
+	</script>
+</body>
+</html>
